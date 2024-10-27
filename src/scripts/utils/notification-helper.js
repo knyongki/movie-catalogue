@@ -11,7 +11,7 @@ const NotificationHelper = {
       return;
     }
 
-    this._showNotification({ title, options });
+    // this._showNotification({ title, options });
   },
 
   _checkAvilability() {
