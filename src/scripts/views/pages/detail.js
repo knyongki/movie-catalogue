@@ -1,7 +1,7 @@
 /* eslint-disable camelcase */
 import TheMovieDbSource from '../../data/themoviedb-source';
 import UrlParser from '../../routes/url-parser';
-import LikeButtonInitiator from '../../utils/like-button-initiatior';
+import LikeButtonPresenter from '../../utils/like-button-presenter';
 import { createMovieDetailTemplate } from '../templates/template-creator';
 
 const Detail = {
@@ -17,7 +17,7 @@ const Detail = {
     const movie = await TheMovieDbSource.detailMovie(url.id);
     const movieContainer = document.querySelector('#movie');
     movieContainer.innerHTML = createMovieDetailTemplate(movie);
-    LikeButtonInitiator.init({
+    LikeButtonPresenter.init({
       likeButtonContainer: document.querySelector('#likeButtonContainer'),
       movie: {
         id: movie.id,
